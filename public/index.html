@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watchly Frontend Screens</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <div class="logo-badge">▶</div>
+        Watchly
+      </div>
+      <nav class="nav">
+        <a href="#landing">Landing</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#room">Room</a>
+        <a href="#feedback">Feedback</a>
+        <a href="#mobile">Mobile</a>
+      </nav>
+      <div class="header-actions">
+        <span class="status-pill">Online</span>
+        <div class="avatar">AM</div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="landing" class="screen">
+        <div class="screen-header">
+          <h2>Landing / Sign in</h2>
+          <p>Watch movies together — stream from your Google Drive.</p>
+        </div>
+        <div class="hero">
+          <h1>Watch movies together — stream from your Google Drive.</h1>
+          <p>Create a private room, invite friends, and watch in perfect sync.</p>
+          <button class="button button-primary google">Sign in with Google</button>
+          <button class="button button-link">How it works</button>
+        </div>
+      </section>
+
+      <section id="loading" class="screen">
+        <div class="screen-header">
+          <h2>Signing in</h2>
+          <p>Loading overlay state for Google connection.</p>
+        </div>
+        <div class="center-card">
+          <div class="spinner"></div>
+          <div>
+            <strong>Signing you in...</strong>
+            <p class="helper">Connecting your Google account</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="dashboard" class="screen">
+        <div class="screen-header">
+          <h2>Dashboard</h2>
+          <p>Manage rooms, create new sessions, and join via link.</p>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <div class="icon-badge">＋</div>
+            <h3>Create a Room</h3>
+            <p class="helper">Start a new watch room and invite friends.</p>
+            <button class="button button-primary">Create Room</button>
+          </div>
+          <div class="card">
+            <div class="icon-badge">⇢</div>
+            <h3>Join a Room</h3>
+            <div class="input-row">
+              <input class="input" placeholder="e.g. watchly.app/r/8821" />
+              <button class="button button-secondary">Join Room</button>
+            </div>
+            <p class="helper">Paste a Watchly room link or code.</p>
+          </div>
+        </div>
+        <div class="card room-card">
+          <div>
+            <div class="room-title">Room #8821</div>
+            <div class="helper">Persistent • Last active 5 minutes ago</div>
+          </div>
+          <div class="room-actions">
+            <button class="button button-secondary">Copy Link</button>
+            <button class="button button-primary">Open Room</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="modals" class="screen">
+        <div class="screen-header">
+          <h2>Key Modals</h2>
+          <p>Create room, room ready, and logout confirmation.</p>
+        </div>
+        <div class="grid">
+          <div class="modal">
+            <h3>Create a new watch room</h3>
+            <div class="input-group">
+              <label>Room name (optional)</label>
+              <input class="input" placeholder="Movie Night" />
+              <span class="helper">This will become your persistent room if you don’t have one.</span>
+            </div>
+            <div class="modal-actions">
+              <button class="button button-secondary">Cancel</button>
+              <button class="button button-primary">Create Room</button>
+            </div>
+          </div>
+          <div class="modal">
+            <div class="success-icon">✔</div>
+            <h3>Your room is ready</h3>
+            <p class="helper">Share this link with friends to start watching together.</p>
+            <div class="input-row">
+              <input class="input" value="https://watchly.co/room/MovieNight-882" readonly />
+              <button class="button button-primary">Copy Link</button>
+            </div>
+            <div class="modal-actions">
+              <button class="button button-secondary">Open Room</button>
+            </div>
+          </div>
+          <div class="modal">
+            <h3>Log out of Watchly?</h3>
+            <p class="helper">You’ll need to sign in again to join or create rooms.</p>
+            <div class="modal-actions">
+              <button class="button button-secondary">Cancel</button>
+              <button class="button button-danger">Log out</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="room" class="screen">
+        <div class="screen-header">
+          <h2>Watch Room</h2>
+          <p>Playback area, chat, participants, and host controls.</p>
+        </div>
+        <div class="room-layout">
+          <div class="player">
+            <div class="player-header">
+              <span class="badge">Syncing playback...</span>
+            </div>
+            <div class="player-body">
+              <div class="planet"></div>
+            </div>
+            <div class="player-controls">
+              <button class="button button-secondary">Resync to host</button>
+              <button class="button button-primary">Host Controls</button>
+              <span class="helper">0:37 / 2:23:15</span>
+            </div>
+          </div>
+          <div class="side-panel">
+            <div class="panel-header">
+              <h3>Participants</h3>
+              <span class="pill">3 / 5</span>
+            </div>
+            <div class="participant">
+              <div class="avatar">AM</div>
+              <div>
+                <strong>Alex M.</strong>
+                <div class="helper">Host</div>
+              </div>
+            </div>
+            <div class="participant">
+              <div class="avatar">SJ</div>
+              <div>
+                <strong>Sarah J.</strong>
+                <div class="helper">Listening</div>
+              </div>
+            </div>
+            <div class="participant">
+              <div class="avatar">MT</div>
+              <div>
+                <strong>Mike T.</strong>
+                <div class="helper">Connected</div>
+              </div>
+            </div>
+            <div class="chat">
+              <div class="chat-message">
+                <span class="label">Sarah</span>
+                <p>Wait, did you see that reflection? The detail is insane.</p>
+              </div>
+              <div class="chat-message me">
+                <span class="label">You</span>
+                <p>Yeah! The CGI holds up so well even today.</p>
+              </div>
+              <div class="chat-message">
+                <span class="label">Mike</span>
+                <p>Hans Zimmer is a genius. This score builds perfectly.</p>
+              </div>
+            </div>
+            <div class="chat-input">
+              <input class="input" placeholder="Say something to the room..." />
+              <button class="button button-primary">Send</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="feedback" class="screen">
+        <div class="screen-header">
+          <h2>System Feedback & Errors</h2>
+          <p>Modal, banner, and overlay states for resilience.</p>
+        </div>
+        <div class="grid">
+          <div class="card feedback">
+            <div class="feedback-icon">🚫</div>
+            <h3>Room is full</h3>
+            <p class="helper">This room already has the maximum of 5 participants.</p>
+            <button class="button button-primary">Notify me if a seat opens</button>
+          </div>
+          <div class="card feedback">
+            <div class="feedback-icon">🔒</div>
+            <h3>Sign-in required</h3>
+            <p class="helper">Please sign in with Google to continue.</p>
+            <button class="button button-secondary">Sign in with Google</button>
+          </div>
+          <div class="card feedback">
+            <div class="feedback-icon">⚠️</div>
+            <h3>Something went wrong</h3>
+            <p class="helper">Please try refreshing the page.</p>
+            <button class="button button-primary">Retry</button>
+          </div>
+        </div>
+        <div class="banner">
+          <strong>Permission denied</strong>
+          <span>You don’t have access to view this Google Drive file.</span>
+          <button class="button button-secondary">Request Access</button>
+        </div>
+      </section>
+
+      <section id="mobile" class="screen">
+        <div class="screen-header">
+          <h2>Mobile Chat View</h2>
+          <p>Compact layout with chat/participants tabs.</p>
+        </div>
+        <div class="mobile-frame">
+          <div class="mobile-header">
+            <span>9:41</span>
+            <strong>Watchly</strong>
+            <span>⚙️</span>
+          </div>
+          <div class="mobile-alert">
+            <strong>You don’t have permission to view this file.</strong>
+            <div class="mobile-actions">
+              <button class="button button-primary">Request Access</button>
+              <button class="button button-link">Ask host to share</button>
+            </div>
+          </div>
+          <div class="mobile-tabs">
+            <span class="active">Chat</span>
+            <span>Participants</span>
+          </div>
+          <div class="mobile-chat">
+            <div class="chat-message">
+              <span class="label">Alex</span>
+              <p>Did you see that ending?!</p>
+            </div>
+            <div class="chat-message me">
+              <span class="label">You</span>
+              <p>Wait, don’t spoil it! I’m slightly behind.</p>
+            </div>
+            <div class="chat-message">
+              <span class="label">Jordan</span>
+              <p>The cinematography is stunning in this scene.</p>
+            </div>
+          </div>
+          <div class="chat-input">
+            <input class="input" placeholder="Say something..." />
+            <button class="button button-primary">➤</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

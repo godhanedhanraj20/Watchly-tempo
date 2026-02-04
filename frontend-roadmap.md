@@ -33,6 +33,7 @@ A web application called **Watchly** that lets users sign in with Google, create
 - Implement global layout shell (header, page container, overlays).
 - Create skeleton loading states and spinners consistent with the visual language.
 
+
 ### Phase 2 – Auth & entry flows (Week 2)
 - Build landing page and Google sign‑in CTA.
 - Add “Signing you in…” overlay state.

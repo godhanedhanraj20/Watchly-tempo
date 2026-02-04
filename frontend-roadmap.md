@@ -32,8 +32,7 @@ A web application called **Watchly** that lets users sign in with Google, create
 - Build a reusable component library: buttons, inputs, cards, modal shell, toast, badges, avatars, tooltips.
 - Implement global layout shell (header, page container, overlays).
 - Create skeleton loading states and spinners consistent with the visual language.
-- See the detailed Phase 1 timeline and checklist in `Project Updates/Phase 1/phase-1-roadmap.md`.
-
+- 
 ### Phase 2 – Auth & entry flows (Week 2)
 - Build landing page and Google sign‑in CTA.
 - Add “Signing you in…” overlay state.
